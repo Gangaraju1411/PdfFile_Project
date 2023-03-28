@@ -39,17 +39,15 @@ public class CreatePdf {
 	          columnNames[i - 1] = metadata.getColumnName(i);
 	      }
 	     
-	      System.out.println("Get the column names");
 		
 		
-    Document document = new Document();
-    PdfWriter.getInstance(document, new FileOutputStream("Data.pdf"));
-    document.open();
+ 	   Document document = new Document();
+  	   PdfWriter.getInstance(document, new FileOutputStream("Data.pdf"));
+  	   document.open();
     
-    PdfPTable table = new PdfPTable(3);
-    PdfPCell header = new PdfPCell();
+  	   PdfPTable table = new PdfPTable(3);
+   	   PdfPCell header = new PdfPCell();
 		
-  //  header.setColspan(3);
     
     
     //Add header row with column names
@@ -70,24 +68,6 @@ public class CreatePdf {
     document.add(table);
     document.close();
     System.out.println("PDF file generated successfully!");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 	}
-
 }
